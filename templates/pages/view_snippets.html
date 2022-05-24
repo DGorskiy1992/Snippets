@@ -3,26 +3,51 @@
 {% block main %}
 
 <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <h1>{{ pagename }}</h1>
-                <hr>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <p>На данной страницы будут отображаться все созданные сниппеты.</p>
-                <p>Пока тут пусто, скоро мы это исправим!</p>
-                <hr>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-4 offset-2">
-                Список сниппетов:
-            </div>
+    <div class="row">
+        <div class="col text-center">
+            <h1>{{ pagename }}</h1>
+            <hr>
         </div>
     </div>
+
+
+
+    <div class="row">
+        <div class="col-4 offset-2">
+            Список сниппетов:
+        </div>
+    </div>
+    <div class="row">
+
+<div class="col">
+   <table class="table table-striped">
+       <thead class="thead-dark">
+       <tr>
+           <th scope="col">ID</th>
+           <th scope="col">Название</th>
+           <th scope="col">Дата создания</th>
+       </tr>
+       </thead>
+       <tbody>
+        {% for snippet in snippets %}
+       <tr>
+           <td scope="row">{{snippet.id}}</td>
+           <td><a href="{% url 'snippet_page' snippet.id %}">{{snippet.name}}</a></td>
+           <td>{{snippet.creation_date}}</td>
+       </tr>
+       {% endfor %}
+
+
+
+       </tbody>
+   </table>
+   <div align="right">
+       <i style="color: gray;">Всего сниппетов: 2</i>
+   </div>
+</div>
+
+
+    </div>
+</div>
 
 {% endblock %}
