@@ -1,12 +1,11 @@
-<!doctype html>
-<html lang="ru" class="h-100">
+!doctype html>
 {% load static %}
+<html lang="ru" class="h-100">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/png" href="{% static 'images/logo.png' %}"/>
-
     <title>PythonBin</title>
 
     <!-- Bootstrap core CSS -->
@@ -34,30 +33,7 @@
 
 <body class="d-flex flex-column h-100">
 
-<header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                <img src="{% static 'images/logo.png' %}" width="32" height="32" alt="">
-                PythonBin
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="form-inline">
-                        <a class="btn btn-outline-secondary" href="{% url 'snippets_add' %}">Добавить сниппет</a>
-                    </li>
-                    <li class="form-inline">
-                        <a class="btn btn-outline-info" href="{% url 'snippets_list' %}">Посмотреть сниппеты</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+{% include 'inc-footer/inc-header.html' %}
 
 <!-- Begin page content -->
 <main role="main" class="mt-3 flex-shrink-0">
@@ -65,12 +41,7 @@
     {% endblock %}
 </main>
 
-<footer class="footer mt-auto py-3">
-    <div class="container">
-    <span class="text-muted">&copy; Дмитрий Горский, {% now "Y" %}. <br>
-        Шаблон заготовка для урока</span>
-    </div>
-</footer>
+{% include 'inc-footer/inc-footer.html' %}
 
 <!-- Optional JavaScript -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"
