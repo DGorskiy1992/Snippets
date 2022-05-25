@@ -24,6 +24,7 @@
             <span style="color:white">
                 Welcome, {{request.user.username }}
                 <a href="{% url 'logout' %}">log out</a>
+                <a href="{% url 'my_snips' %}">Мои сниппеты</a>
             </span>
 
             {% else %}
@@ -32,6 +33,7 @@
                 <input name="password" type="password" placeholder="password">
                 <button type="submit">login</button>
             </form>
+            <a href="{% url 'registration' %}">sign up</a>
             {% endif %}
 
         </div>
