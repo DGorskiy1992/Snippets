@@ -1,3 +1,7 @@
 Django==3.1
 django-extensions==3.0.5
 ipython
+gunicorn
+django-heroku
+psycopg2-binary
+dj-database-url==0.5.0
