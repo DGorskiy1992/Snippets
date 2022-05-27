@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load my_tags %}
 {% block main %}
 
 <div class="container">
@@ -35,7 +35,7 @@
            <td scope="row">{{snippet.id}}</td>
            <td><a href="{% url 'snippet_page' snippet.id %}">{{snippet.name}}</a></td>
            <td>{{snippet.creation_date}}</td>
-           <td>{{snippet.user}}</td>
+           <td>{{snippet.user|is_empty:"Аноним"}}</td>
        </tr>
        {% endfor %}
 
