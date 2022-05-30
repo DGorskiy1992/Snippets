@@ -7,9 +7,9 @@ def is_empty(value, alt):
        return value
    return alt
 
-def newline(text):
-    return text.replace('\n','<br>')
+# def newline(text):
+#     return text.replace('\n','<br>')
 
 
 register.filter('is_empty', is_empty)
-register.filter('newline', newline)
+# register.filter('newline', newline)

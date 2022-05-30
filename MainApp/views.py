@@ -24,11 +24,35 @@ def add_snippet_page(request):
             return redirect("snippets_list")
 
 
+def snippet_delete(request, id):
+    snippet = Snippet.objects.get(pk=id)
+    snippet.delete()
+    return redirect("snippets_list")
+
+
+def snippet_edit(request, id):
+    try:
+        snippet = Snippet.objects.get(pk=id)
+
+        if request.method == "POST":
+            snippet.name = request.POST.get("name")
+            snippet.lang = request.POST.get("lang")
+            # snippet.lang = "python"
+            snippet.code = request.POST.get("code")
+            snippet.save()
+            return redirect("snippets_list")
+        else:
+            return render(request, "pages/edit.html", {"snippet": snippet})
+    except Snippet.DoesNotExist:
+        raise Http404
+
+
 def snippets_page(request):
     snippets = Snippet.objects.all()
     context = {
         'pagename': 'Просмотр сниппетов',
         'snippets': snippets,
+        'quantity': len(snippets),
 
     }
     return render(request, 'pages/view_snippets.html', context)

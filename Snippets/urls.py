@@ -16,12 +16,15 @@ Including another URLconf
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib import  admin
 
 from MainApp import views
 
 urlpatterns = [
     path('', views.index_page, name="index"),
     path('snippets/add', views.add_snippet_page, name="snippets_add"),
+    path('snippets/delete/<int:id>', views.snippet_delete, name="snippet_delete"),
+    path('snippets/edit/<int:id>', views.snippet_edit, name="snippet_edit"),
     path('snippets/list', views.snippets_page, name="snippets_list"),
     path('snippets/<int:id>', views.snippet_page, name="snippet_page"),
     path('login', views.login_page, name='login'),
@@ -29,5 +32,6 @@ urlpatterns = [
     path('registration', views.register, name='registration'),
     path('my_snippets', views.my_snips, name='my_snips'),
     path('comment/add', views.comment_add, name="comment_add"),
+    path('admin/', admin.site.urls),
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
