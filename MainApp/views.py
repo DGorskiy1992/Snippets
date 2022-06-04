@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from MainApp.models import Snippet, Comment
 from MainApp.forms import SnippetForm, UserRegistrationForm, CommentForm
 from django.contrib import auth
+from django.db.models import Q
 
 
 def index_page(request):
@@ -37,6 +38,7 @@ def snippet_edit(request, id):
         if request.method == "POST":
             snippet.name = request.POST.get("name")
             snippet.lang = request.POST.get("lang")
+            snippet.is_public = request.POST.get("is_public")
             # snippet.lang = "python"
             snippet.code = request.POST.get("code")
             snippet.save()
@@ -48,7 +50,10 @@ def snippet_edit(request, id):
 
 
 def snippets_page(request):
-    snippets = Snippet.objects.all()
+    if request.user.is_anonymous:
+        snippets = Snippet.objects.filter(is_public=True)
+    else:
+        snippets = Snippet.objects.filter(Q(is_public=True) | Q(user=request.user))
     context = {
         'pagename': 'Просмотр сниппетов',
         'snippets': snippets,

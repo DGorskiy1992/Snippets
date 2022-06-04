@@ -13,6 +13,7 @@ class Snippet(models.Model):
     lang = models.CharField(max_length=30, choices=LANGS)
     code = models.TextField(max_length=5000)
     creation_date = models.DateTimeField(auto_now_add=True)
+    is_public = models.BooleanField(null=True)
     user = models.ForeignKey(to=User, on_delete=models.CASCADE,
                              blank=True, null=True, related_name="snippets")
 
