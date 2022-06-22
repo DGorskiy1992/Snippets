@@ -16,6 +16,19 @@
         <div class="col-4 offset-2">
             Список сниппетов:
         </div>
+        <div class="col-2">
+            <form action="" method="post">
+                {% csrf_token %}
+                Показать только на языке программирования
+                <select name="lang">
+                    <option disabled selected>Выберите язык</option>
+                    <option value="C++">C++</option>
+                    <option value="python">Python</option>
+                    <option value="js">JS</option>
+                </select>
+                <input type="submit" value="Выбрать">
+            </form>
+        </div>
     </div>
     <div class="row">
 
@@ -35,8 +48,8 @@
            <td scope="row">{{snippet.id}}</td>
            <td>
                <a href="{% url 'snippet_page' snippet.id %}">{{snippet.name}}</a>
-               <a href="{% url 'snippet_delete' snippet.id %}"><i style="color:red" class="fa-solid fa-ban"></i></a>
-               <a href="{% url 'snippet_edit' snippet.id %}"><i style="color:blue" class="fa-solid fa-pen-to-square"></i></a>
+               <a class="tool" href="{% url 'snippet_delete' snippet.id %}"><i style="color:red" class="fa-solid fa-ban"></i></a>
+               <a class="tool" href="{% url 'snippet_edit' snippet.id %}"><i style="color:blue" class="fa-solid fa-pen-to-square"></i></a>
 
            </td>
            <td>{{snippet.creation_date}}</td>

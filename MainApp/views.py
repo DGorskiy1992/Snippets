@@ -4,6 +4,7 @@ from MainApp.models import Snippet, Comment
 from MainApp.forms import SnippetForm, UserRegistrationForm, CommentForm
 from django.contrib import auth
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 
 
 def index_page(request):
@@ -25,12 +26,14 @@ def add_snippet_page(request):
             return redirect("snippets_list")
 
 
+@login_required
 def snippet_delete(request, id):
     snippet = Snippet.objects.get(pk=id)
     snippet.delete()
     return redirect("snippets_list")
 
 
+@login_required
 def snippet_edit(request, id):
     try:
         snippet = Snippet.objects.get(pk=id)
@@ -54,6 +57,8 @@ def snippets_page(request):
         snippets = Snippet.objects.filter(is_public=True)
     else:
         snippets = Snippet.objects.filter(Q(is_public=True) | Q(user=request.user))
+    if request.method == "POST":
+        snippets = snippets.filter(lang=request.POST.get("lang"))
     context = {
         'pagename': 'Просмотр сниппетов',
         'snippets': snippets,
@@ -117,7 +122,7 @@ def my_snips(request):
 
 def comment_add(request):
     if request.method == "POST":
-        comment_form = CommentForm(request.POST)
+        comment_form = CommentForm(request.POST, request.FILES)
         snipet_id = request.POST.get("snippet_id")
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
@@ -127,4 +132,14 @@ def comment_add(request):
 
         return redirect(f'/snippets/{snipet_id}')
 
+    raise Http404
+
+def snippets_search(request):
+    if request.method == "POST":
+        try:
+            snippet_id = request.POST.get("snid")
+            snippet = Snippet.objects.get(pk=snippet_id)
+            return snippet_page(request, snippet_id)
+        except Snippet.DoesNotExist:
+            return redirect('/')
     raise Http404

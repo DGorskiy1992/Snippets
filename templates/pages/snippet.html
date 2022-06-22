@@ -1,43 +1,46 @@
 {% extends 'base.html' %}
 {% block main %}
+{% load my_tags %}
 <fieldset disabled>
-   <div class="row disabled">
-       <div class="col col-8">
-           Название: <input type="text" value="Hello world" class="form-control">
-       </div>
-       <div class="col col-4">
-           Дата создания:<input type="text" value="23.11.2020" class="form-control">
-       </div>
-   </div>
-   <hr>
-   <div class="row">
-       <div class="col">
-           <div class="p-2 h-100" style="border:1px solid #ced4da; border-radius:5px;">
-               <p>
-                   print("hello world")
-               </p>
+    <div class="row disabled">
+        <div class="col col-8">
+            Название: <input type="text" value="{{ snippet.name }}" class="form-control">
+        </div>
+        <div class="col col-4">
+            Дата создания:<input type="text" value="{{ snippet.creation_date }}" class="form-control">
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <div class="p-2 h-100" style="border:1px solid #ced4da; border-radius:5px;">
+                <p>
+                    {{ snippet.code|newline:"\n" }}
+                </p>
 
-           </div>
+            </div>
 
-       </div>
-   </div>
+        </div>
+    </div>
 </fieldset>
 
 <div class="row">
-      <div class="col">
-          <ul>
-              {% for comment in snippet.comments.all %}
-                <li>{{comment.text}}</li>
-              {% endfor %}
-          </ul>
-      </div>
+    <div class="col">
+        <ul>
+            {% for comment in snippet.comments.all %}
+            <li>{{comment.text}}</li>
+            <img src="{{MEDIA_URL}}{{comment.image}}" height="40px" width="40px">
+            {% endfor %}
+        </ul>
+    </div>
 
 </div>
 <div class="row">
     <div class="col">
-        <form action="{% url 'comment_add' %}" method="POST"> {% csrf_token %}
+        <form action="{% url 'comment_add' %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
 
             {{ form.text }}
+            {{ form.image }}
             <input name="snippet_id" type="hidden" value="{{snippet.id}}">
             <button type="submit">Добавить</button>
         </form>

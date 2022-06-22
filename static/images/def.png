@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html class="dark-template   ">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="https://blackmantkd.com/wp-content/uploads/2019/08/Blackmans-Championship-MA_Favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=gjoqtlxdbrctqnxgq05tha" async="true"></script>
+        <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2014865915484057');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2014865915484057&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->        <style>
+        .home .topper h1 span {
+        color: #ee1d24;
+    }
+    .social-icons li a {
+        background: #ee1d24;
+    }
+    .testimonial-left {
+        background: #ee1d24;
+    }
+    .slide hr {
+        background: #ee1d24;
+    }
+    .programs hr {
+        background: #ee1d24;
+    }
+    nav ul li.current_page_item a {
+        color: #ee1d24;
+    }
+    .home-request-bot input[type="submit"] {
+        background: #ee1d24 !important;
+    }
+    .indiv-program-info hr {
+        background: #ee1d24;
+    }
+    .call-us ul li ul {
+        background: #080d13;
+    }
+    .call-us a, .call-us i {
+        color: #ee1d24 !important;
+    }
+    .footer-col hr {
+        background: #ee1d24;
+    }
+    .meta ul li a { 
+        background: #080d13; 
+    }
+    .location-inner {
+        background: #ee1d24;
+    }
+    .location-middle {
+        background: #080d13; 
+    }
+    .module.light .testimonial-name {
+        color: #ee1d24;
+    }
+    .offer-overlay {
+        background: #080d13;
+    }
+    .light-template .featured-bar {
+        background: #080d13;
+    }
+        nav ul li ul {
+        background: #080d13;
+    }
+    nav ul li.current_page_item a {
+        border-color: #ee1d24;
+    }
+        .overlay-bg {
+        background: #080d13;
+    }
+    .overlay-form .gform_wrapper .gform_footer input[type="submit"] {
+        background: black;
+    }
+    .overlay-form {
+        background: #ee1d24 !important;
+    }
+        .btn {
+        background: #ee1d24;
+    }
+        main a {
+        color: #ee1d24;
+    }
+        .inner-optin {
+        background: #ee1d24;
+    }
+    .step-number {
+        background: #ee1d24;
+    }
+        .footer-bot {
+        background: #080d13;
+    }
+    .footer-top-overlay {
+        background: -moz-linear-gradient(top, #080d13 0%, rgba(0,0,0,0) 86%, rgba(0,0,0,0) 100%);
+        background: -webkit-linear-gradient(top, #080d13 0%,rgba(0,0,0,0) 86%,rgba(0,0,0,0) 100%);
+        background: linear-gradient(to bottom, #080d13 0%,rgba(0,0,0,0) 86%,rgba(0,0,0,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 );
+    }
+        .indiv-program-info .btn {
+        background: #ee1d24 !important;
+        border: 2px solid #ee1d24;
+    }
+    .program-top {
+        background: #080d13;
+    }
+    .program-item.current {
+        border: 4px solid #ee1d24 !important;
+    }
+    .program-item.current:before {
+        background-color: #ee1d24;
+    }
+    .program-schedule-nav ul li.current {
+        color: #ee1d24;
+        border-bottom: 3px solid #ee1d24;
+    }
+    .home .indiv-testimonial {
+        border: 5px solid #ee1d24;
+    }
+    @media (min-width: 768px) {
+        .program-item.current .btn {
+            background: #ee1d24;
+            border: 3px solid #ee1d24 !important;
+            -webkit-box-shadow: 0px 0px 40px -4px #ee1d24;
+            -moz-box-shadow: 0px 0px 40px -4px #ee1d24;
+            box-shadow: 0px 0px 40px -4px #ee1d24;
+        }
+        .indiv-program {
+            border-right: 25px solid white;
+        }
+    }
+    @keyframes dropshadow {
+        0% {
+            -webkit-box-shadow: 0px 0px 0px -4px #ee1d24;
+            -moz-box-shadow: 0px 0px 0px -4px #ee1d24;
+            box-shadow: 0px 0px 0px -4px #ee1d24;
+        }
+        50% {
+            -webkit-box-shadow: 0px 0px 40px 4px #ee1d24;
+            -moz-box-shadow: 0px 0px 40px 4px #ee1d24;
+            box-shadow: 0px 0px 40px 4px #ee1d24;
+        }
+        100% {
+            -webkit-box-shadow: 0px 0px 0px -4px #ee1d24;
+            -moz-box-shadow: 0px 0px 0px -4px #ee1d24;
+            box-shadow: 0px 0px 0px -4px #ee1d24;
+        }
+    }
+    @keyframes dropshadow-alt {
+        0% {
+            -webkit-box-shadow: 0px 0px 0px -4px #ee1d24;
+            -moz-box-shadow: 0px 0px 0px -4px #ee1d24;
+            box-shadow: 0px 0px 0px -4px #ee1d24;
+        }
+        50% {
+            -webkit-box-shadow: 0px 0px 20px -4px #ee1d24;
+            -moz-box-shadow: 0px 0px 20px -4px #ee1d24;
+            box-shadow: 0px 0px 20px -4px #ee1d24;
+        }
+        100% {
+            -webkit-box-shadow: 0px 0px 0px -4px #ee1d24;
+            -moz-box-shadow: 0px 0px 0px -4px #ee1d24;
+            box-shadow: 0px 0px 0px -4px #ee1d24;
+        }
+    }
+    .program-top-right .btn.ready {
+        animation: dropshadow 2s infinite;
+    }
+    .sticky-program-bar {
+        background: #080d13;
+    }
+    .faq-title:hover {
+        color: #ee1d24;
+    }
+    .arrow-indicator svg path {
+        fill: #ee1d24;
+    }
+        .module .btn {
+        background: #ee1d24;
+    }
+    .column-icon svg path {
+        stroke: #ee1d24;
+    }
+    .location-bar {
+        background: #ee1d24;
+    }
+    .location-hours-top {
+        border-left: 2px solid #ee1d24;
+    }
+        .meta a {
+        color: #ee1d24;
+    }
+    .gform_widget .gform_wrapper .gform_footer input[type="submit"] {
+        background: #ee1d24;
+    }
+        .single-offer .gform_footer input[type="submit"] {
+        background: #ee1d24;
+    }
+    .offer-countdown {
+        border: 3px solid #ee1d24;
+        animation: dropshadow-alt 2s infinite;
+    }
+    .schedule-title {
+        background: #ee1d24;
+    }
+    .sub-nav-items li.current {
+        color: #ee1d24;
+    }
+        .mobile-bar {
+        background: #080d13;
+    }
+        .members-navigation ul li a:hover {
+        background: #ee1d24;
+    }
+    .member-item-right a:hover, .back-to-member a:hover, .featured-post a:hover {
+        color: #ee1d24;
+    }
+        .form.light input[type="submit"] {
+        background: #ee1d24;
+    }
+    .day-col-title {
+        background: #ee1d24;
+    }
+    .class-tag {
+        background: #ee1d24;
+    }
+    .privacy-link {
+        color: white;
+        margin-left: 10px;
+        border-left: 1px solid white;
+        padding-left: 10px;
+    }
+        .login-area input[type="submit"] {
+        background: #ee1d24;
+    }
+    .student-announcement {
+        background: #ee1d24;
+    }
+    .student-btn {
+        background: #ee1d24;
+    }
+    .student-nav ul li a:hover {
+        background: #ee1d24;
+    }
+    .student-curriculum-meta a {
+        color: #ee1d24;
+        border: 1px solid #ee1d24;
+    }
+    .optional-password input[type="submit"] {
+        background: #ee1d24;
+    }
+    @media (min-width: 768px) {
+        .student-alt {
+            border: 2px solid #ee1d24 !important;
+            color: #ee1d24;
+        }
+    }
+</style>    <meta name='robots' content='max-image-preview:large' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v14.4.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>default-image | Blackman&#039;s Championship Martial Arts</title>
+	<meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="default-image | Blackman&#039;s Championship Martial Arts" />
+	<meta property="og:url" content="https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg" />
+	<meta property="og:site_name" content="Blackman&#039;s Championship Martial Arts" />
+	<meta property="article:modified_time" content="2017-07-21T19:42:55+00:00" />
+	<meta property="og:image" content="https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg" />
+	<meta property="og:image:width" content="800" />
+	<meta property="og:image:height" content="600" />
+	<meta name="twitter:card" content="summary" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blackmantkd.com/#website","url":"https://blackmantkd.com/","name":"Blackman&#039;s Championship Martial Arts","description":"Albuquerque","potentialAction":[{"@type":"SearchAction","target":"https://blackmantkd.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg#webpage","url":"https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg","name":"default-image | Blackman&#039;s Championship Martial Arts","isPartOf":{"@id":"https://blackmantkd.com/#website"},"datePublished":"2017-06-23T02:40:22+00:00","dateModified":"2017-07-21T19:42:55+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel='stylesheet' id='mm_form_custom_style-css'  href='https://blackmantkd.com/wp-content/plugins/mm-forms//css/mm-form.css?ver=5.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://blackmantkd.com/wp-includes/css/dashicons.min.css?ver=5.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='thickbox-css'  href='https://blackmantkd.com/wp-includes/js/thickbox/thickbox.css?ver=5.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='parent-theme-css'  href='https://blackmantkd.com/wp-content/themes/mm-prime-ma/assets/build/style.min.css?ver=5.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='child-theme-css'  href='https://blackmantkd.com/wp-content/themes/mm-prime-ma-cma/assets/build/style.min.css?ver=5.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='mm-typeface-css'  href='https://fonts.googleapis.com/css?family=Oswald%3A400%2C500%2C600%2C700%7CSource+Sans+Pro%3A400%2C400i%2C700%2C700i&#038;ver=5.8.1&#038;display=swap' type='text/css' media='all' />
+<script type='text/javascript' id='jquery-core-js-extra'>
+/* <![CDATA[ */
+var pp = {"ajax_url":"https:\/\/blackmantkd.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blackmantkd.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://blackmantkd.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://blackmantkd.com/wp-content/plugins/mm-members/assets/js/plugins/mm-members.js?v=115727&#038;ver=5.8.1' id='mm-members-script-js'></script>
+        <script>
+            var plugin_url = "https://blackmantkd.com/wp-content/plugins/mm-plugin/inc/";
+        </script>
+        <script>var musclenet_socialproof_url = 'https://core.musclenet.io/api/social-proof/'; var musclenet_id = 'MM-0ABX8-TM'; var interval = 8000; var time = 48; var delay = 2000;</script><script type="text/javascript" src="https://blackmantkd.com/wp-content/plugins/mm-plugin/inc/js/main_heade.js"></script><script type="text/javascript" src="https://blackmantkd.com/wp-content/plugins/mm-plugin/inc/js/bootstrap-notify.js"></script><link href="https://blackmantkd.com/wp-content/plugins/mm-plugin/inc/css/animate.css" rel="stylesheet"><link href="https://blackmantkd.com/wp-content/plugins/mm-plugin/inc/css/custom.css" rel="stylesheet">		<style type="text/css" id="wp-custom-css">
+			.logo {
+	max-width: 100px;
+}
+
+@media (min-width: 768px) {
+	.logo {
+		max-width: 150px;
+	}
+}
+
+.program-top-left img {
+ 	width: 60px;
+}
+nav ul li ul {
+	width: 280px !important;
+}
+
+@media (min-width: 960px) {
+.new .profit-generator {
+height: 800px;
+display: block;
+}
+}		</style>
+		    </head>
+    <body class="attachment attachment-template-default attachmentid-460 attachment-jpeg default-image elementor-default elementor-kit-3106">
+                <div class="entire-site new">
+                        <div class="mobile-nav">
+                <div class="overlay-bg"></div>
+                <div class="mobile-bar"></div>
+                <div class="mobile-close">
+                    <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M38 12.83l-2.83-2.83-11.17 11.17-11.17-11.17-2.83 2.83 11.17 11.17-11.17 11.17 2.83 2.83 11.17-11.17 11.17 11.17 2.83-2.83-11.17-11.17z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>                </div>
+                <div class="mobile-menu">
+                    <div class="mobile-header">
+                        <a href="https://blackmantkd.com/">
+                            <img src="https://blackmantkd.com/wp-content/themes/mm-prime-ma-cma/assets/img/cma-logo.png" alt="Blackman's Championship Martial Arts">
+                        </a>
+                    </div>
+                    <ul id="primary-navigation" class="menu"><li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-247"><a href="https://blackmantkd.com/">Home</a></li>
+<li id="menu-item-250" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-250"><a href="#">Programs</a>
+<ul class="sub-menu">
+	<li id="menu-item-3010" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-3010"><a href="https://blackmantkd.com/program/juniors-martial-arts/">Tiny Tigers / Little Dragons (3 – 6)</a></li>
+	<li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-254"><a href="https://blackmantkd.com/program/kids-martial-arts/">Kids Martial Arts (7 &#8211; 12)</a></li>
+	<li id="menu-item-434" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-434"><a href="https://blackmantkd.com/program/teens-martial-arts/">Teen Martial Arts (13+)</a></li>
+	<li id="menu-item-251" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-251"><a href="https://blackmantkd.com/program/adult-martial-arts/">Adult Martial Arts</a></li>
+</ul>
+</li>
+<li id="menu-item-248" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-248"><a href="https://blackmantkd.com/blog/">Blog</a></li>
+<li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-location menu-item-261"><a href="https://blackmantkd.com/location/albuquerque-nm/">Contact</a></li>
+</ul>                    <div class="mobile-button">    
+                        <a class="btn pop-over">Get Started Today!</a>
+                    </div>
+                </div>
+            </div>
+                                                            <div class="overlay-lightbox show-popup">
+                        <div class="overlay-bg"></div>
+                        <div class="overlay-lightbox-popup">
+                            <div class="overlay-close">
+                                <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M38 12.83l-2.83-2.83-11.17 11.17-11.17-11.17-2.83 2.83 11.17 11.17-11.17 11.17 2.83 2.83 11.17-11.17 11.17 11.17 2.83-2.83-11.17-11.17z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>                            </div>
+                            <div class="overlay-image overlay-formbg" style="background-image:url('https://media.musclegrid.io/blackmantkd.com/uploads/2019/08/01122449/2022-June-Promo.jpg');">
+                                                            </div>
+                                                            <div class="overlay-form">
+                                    <div class="optin-header">ACCESS OUR SCHEDULE</div>
+                                    <div class="optin-sub-header">& EXCLUSIVE WEB SPECIAL</div>
+                                    <p>Secure your spot and get started today with our EXCLUSIVE offer!</p>
+                                                                            <div class="form-wrapper">
+    <form method="post" action="#" class="mm-custom-form mm-custom-form-home" id="mm-custom-form-home1101641394" data-instance="1101641394">
+        <div id="mm-form-submission-message-home1101641394" class="mm-form-submission-message mm-form-submission-message-home mm-form-submission-message-home1101641394" style="display: none;"></div>
+        <fieldset>
+            <div class="gform_body">
+                <ul class="gform_fields">
+                    <li class="gfield">
+                        <input type="text" name="full_name" class="full-name" placeholder="Full Name*" class="name-field">
+                    </li>
+
+                    <li class="gfield">
+                        <input type="text" name="email" placeholder="Email*" class="email-field">
+                    </li>
+
+                    <li class="gfield">
+                        <input type="text" name="phone" placeholder="Phone*" class="phone-field" minlength="7">
+                    </li>
+
+                                                <li class="gfield field-program">
+                                <select name="program" class="mm-programs">
+                                                                            <option value="">Select a Service*</option>
+                                                                                                                                                            <option value="695">Tiny Tigers </br>Little Dragons</br>(Ages 3 &#8211; 6)</option>
+                                                                                                                                                            <option value="229">Kids Martial Arts </br>(Ages 7 &#8211; 12)</option>
+                                                                                                                                                            <option value="428">Teen Martial Arts </br>(Ages 13+)</option>
+                                                                                                                                                            <option value="236">Adult Martial Arts</option>
+                                                                                                        </select>
+                            </li>
+                                                                
+                                                                                <input type="hidden" name="location" value="albuquerque-nm">
+                                                                                            
+
+                    
+                    <li class="pain-point-field">
+                        <input type="hidden" name="pain_point" value="">
+                    </li>
+                </ul>
+            </div>
+            <div class="gform_footer top_label">
+                <input type="checkbox" name="contact_me_by_phone" value="1" style="display:none !important" tabindex="-1" autocomplete="off">
+                <input type="submit" name="submit" value="Get Started Today">
+            </div>
+        </fieldset>
+    </form>
+</div>                                        <span>By opting into the web form above you are providing consent for Blackman's Championship Martial Arts to send you periodic text messages. Standard rates may apply. You can reply HELP at anytime or learn more. You may opt-out anytime by replying STOP.</span>
+                                                                    </div>
+                                                    </div>
+                    </div>
+                                                        <div class="overlay-form-pop">
+                    <div class="overlay-bg"></div>
+                    <div class="overlay-popup">
+                        <div class="overlay-close">
+                            <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M38 12.83l-2.83-2.83-11.17 11.17-11.17-11.17-2.83 2.83 11.17 11.17-11.17 11.17 2.83 2.83 11.17-11.17 11.17 11.17 2.83-2.83-11.17-11.17z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>                        </div>
+                        <div class="overlay-form">
+                            <div class="optin-header">ACCESS OUR SCHEDULE</div>
+                            <div class="optin-sub-header">& EXCLUSIVE WEB SPECIAL</div>
+                            <p>Secure your spot and get started today with our EXCLUSIVE offer!</p>
+                                                            <div class="form-wrapper">
+    <form method="post" action="#" class="mm-custom-form mm-custom-form-home" id="mm-custom-form-home677193386" data-instance="677193386">
+        <div id="mm-form-submission-message-home677193386" class="mm-form-submission-message mm-form-submission-message-home mm-form-submission-message-home677193386" style="display: none;"></div>
+        <fieldset>
+            <div class="gform_body">
+                <ul class="gform_fields">
+                    <li class="gfield">
+                        <input type="text" name="full_name" class="full-name" placeholder="Full Name*" class="name-field">
+                    </li>
+
+                    <li class="gfield">
+                        <input type="text" name="email" placeholder="Email*" class="email-field">
+                    </li>
+
+                    <li class="gfield">
+                        <input type="text" name="phone" placeholder="Phone*" class="phone-field" minlength="7">
+                    </li>
+
+                                                <li class="gfield field-program">
+                                <select name="program" class="mm-programs">
+                                                                            <option value="">Select a Service*</option>
+                                                                                                                                                            <option value="695">Tiny Tigers </br>Little Dragons</br>(Ages 3 &#8211; 6)</option>
+                                                                                                                                                            <option value="229">Kids Martial Arts </br>(Ages 7 &#8211; 12)</option>
+                                                                                                                                                            <option value="428">Teen Martial Arts </br>(Ages 13+)</option>
+                                                                                                                                                            <option value="236">Adult Martial Arts</option>
+                                                                                                        </select>
+                            </li>
+                                                                
+                                                                                <input type="hidden" name="location" value="albuquerque-nm">
+                                                                                            
+
+                    
+                    <li class="pain-point-field">
+                        <input type="hidden" name="pain_point" value="">
+                    </li>
+                </ul>
+            </div>
+            <div class="gform_footer top_label">
+                <input type="checkbox" name="contact_me_by_phone" value="1" style="display:none !important" tabindex="-1" autocomplete="off">
+                <input type="submit" name="submit" value="Get Started Today">
+            </div>
+        </fieldset>
+    </form>
+</div>                                <span>By opting into the web form above you are providing consent for Blackman's Championship Martial Arts to send you periodic text messages. Standard rates may apply. You can reply HELP at anytime or learn more. You may opt-out anytime by replying STOP.</span>
+                                                    </div>
+                        <div class="overlay-testimonials">
+                                                             
+                        </div>
+                    </div>
+                </div>
+                            <header class="">
+                    <div class="header-top">
+                        <div class="container">
+                            <div class="header-top-left">
+                                <span class="business-name">Blackman's Championship Martial Arts</span> <span class="business-tagline">Albuquerque</span>
+                            </div>
+                            <div class="header-top-right">
+                                <div class="call-us">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span>Call us today!</span>
+                                                                                                                                                                                                                                                                                            <div class="phone-number"><a href="tel:505-856-5616">505-856-5616</a></div>
+                                                                                                             
+                                                                                                                                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-bot">
+                        <div class="container">
+                            <div class="header-bot-left">
+                                <div class="logo">
+                                    <a href="https://blackmantkd.com/">
+                                                                                    <img src="https://blackmantkd.com/wp-content/themes/mm-prime-ma-cma/assets/img/cma-logo.png" alt="Blackman's Championship Martial Arts">
+                                                                            </a>
+                                </div>
+                                                            </div>
+                            <div class="header-bot-right">
+                                <button class="hamburger hamburger--spin" type="button">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <div class="btn pop-over">Request Information</div>
+                                                                <nav>
+                                    <ul id="primary-navigation" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-247"><a href="https://blackmantkd.com/">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-250"><a href="#">Programs</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-program menu-item-3010"><a href="https://blackmantkd.com/program/juniors-martial-arts/">Tiny Tigers / Little Dragons (3 – 6)</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-program menu-item-254"><a href="https://blackmantkd.com/program/kids-martial-arts/">Kids Martial Arts (7 &#8211; 12)</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-program menu-item-434"><a href="https://blackmantkd.com/program/teens-martial-arts/">Teen Martial Arts (13+)</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-program menu-item-251"><a href="https://blackmantkd.com/program/adult-martial-arts/">Adult Martial Arts</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-248"><a href="https://blackmantkd.com/blog/">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-location menu-item-261"><a href="https://blackmantkd.com/location/albuquerque-nm/">Contact</a></li>
+</ul>                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="fixed-header">
+                    <div class="container">
+                        <div class="logo">
+                            <a href="https://blackmantkd.com/">
+                                <img src="https://blackmantkd.com/wp-content/themes/mm-prime-ma-cma/assets/img/cma-logo.png" alt="Blackman's Championship Martial Arts">
+                            </a>
+                        </div>
+                        <div class="btn pop-over">Request Information</div>
+                    </div>
+                </div>	<main>
+		<div class="container">
+			        
+			<h1>default-image</h1>
+		<img width="800" height="600" src="https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg 800w, https://blackmantkd.com/wp-content/uploads/2017/04/default-image-300x225.jpg 300w, https://blackmantkd.com/wp-content/uploads/2017/04/default-image-768x576.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" />				<div class="downloads">
+			Downloads: 
+			<a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg">full (800x600)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image-150x150.jpg">thumbnail (150x150)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image-300x225.jpg">medium (300x225)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image-768x576.jpg">medium_large (768x576)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg">large (800x600)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg">1536x1536 (800x600)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg">2048x2048 (800x600)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg">topper-image (800x600)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image-720x530.jpg">split-image (720x530)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image-200x200.jpg">head-shot (200x200)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image-800x600.jpg">footer-image (800x600)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image-620x600.jpg">program-thumbnail (620x600)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg">instructor-thumbnail (373x280)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg">section-image (800x600)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg">pain-point-image (712x534)</a> | <a href="https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg">staff-head-shot (370x278)</a>		</div>
+			</div>
+	</main>
+      
+                <footer >	
+			<div class="footer-top">
+    <div class="container">
+        <div class="footer-col first-col">
+            <img src="https://blackmantkd.com/wp-content/themes/mm-prime-ma-cma/assets/img/cma-logo.png" alt="Blackman's Championship Martial Arts">
+        </div>
+        <div class="footer-col second-col">
+            <h5>About Us</h5>
+            <hr />
+            <p>Blackman’s Championship Martial Arts, with over 500 students, is the finest school in the Albuquerque area, dedicated to making your Martial Arts experience enjoyable and satisfying. Our instructors are the best! They have studied and trained for years to qualify as part of the Blackman’s Championship Martial Arts Team, and their primary goal is to assist you in being the best you can be. Our carefully structured programs go far beyond punching, blocking and kicking. We will help you acquire effective self-defense skills and provide you with a comprehensive, personal development & Life Skills program. It is our goal to raise the quality of life for all our students in every way possible. Although we honor Martial Arts traditions that go back centuries, we are dynamic and are constantly seeking new and innovative ways to enthuse and excite our students. At our Academy we also host various activities and events for everyone’s convenience and enjoyment. We have Graduation Parties to celebrate belt promotions, “Make-Up Camps”, In-House Tournaments to build camaraderie amongst our students, “Buddy Days”, special seminars with featured guest Masters and Grandmasters, an annual Holiday Party, and many more exciting events. We also offer Birthday Parties filled with exciting Martial Arts Games and Black Belt instructors ready to teach awesome techniques to all our birthday guests. We pledge to make each student’s journey as fun, exciting, and educating as possible. We monitor progress closely and walk with students every step of the way. We believe that being a Martial Artist is not jut learning to kick and punch, it is about becoming the best that you can be in every way - Building Champions in Life Since 1993.</p>
+<p>In 2016 Blackman Martial Arts Academy has partnered up with Championship Martial Arts, not only very good friends, but very successful multi school owners, Frank Silverman & Mike Metzger, who own 9 schools in Orlando, Florida, and 60 affiliates Nation wide. Together, this allows our instructors to not only network with other instructors but also have more training and education which is passed onto our students. In 2019, we joined the Hyper Training System from Roland Osborne, to incorporate additional Martial Arts Athlete Systems, including Tricking, Weapons, and additional curriculum for Kamas, Nunchakus, and Bo Staff, and Demo Team forms and techniques. We also have top Martial Arts contacts across the country to support our school and program. Our owners and staff attend conferences 3-4 times per year to continue to improve and grow in the value of our program and effectiveness of instruction. Blackman’s Championship Martial Arts is a part of this National network of highly rated schools to bring the best possible experience to our Albuquerque families!</p>
+        </div>
+        <div class="footer-col third-col">
+            <h5>Contact Us</h5>
+            <hr />
+                                                                        <div class="footer-location"> 
+                            <h6>Albuquerque, NM</h6>
+                            <ul>
+                                <li class="phone"><span><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect fill="none" height="50" width="50"/><path d="M30.217,35.252c0,0,4.049-2.318,5.109-2.875  c1.057-0.559,2.152-0.7,2.817-0.294c1.007,0.616,9.463,6.241,10.175,6.739c0.712,0.499,1.055,1.924,0.076,3.32  c-0.975,1.396-5.473,6.916-7.379,6.857c-1.909-0.062-9.846-0.236-24.813-15.207C1.238,18.826,1.061,10.887,1,8.978  C0.939,7.07,6.459,2.571,7.855,1.595c1.398-0.975,2.825-0.608,3.321,0.078c0.564,0.781,6.124,9.21,6.736,10.176  c0.419,0.66,0.265,1.761-0.294,2.819c-0.556,1.06-2.874,5.109-2.874,5.109s1.634,2.787,7.16,8.312  C27.431,33.615,30.217,35.252,30.217,35.252z" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"/></svg>
+</span><a href="tel:505-856-5616">505-856-5616</a></li>
+                                <li class="email"><span><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect fill="none" height="34" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" width="48" x="1" y="8"/><line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" x1="33.357" x2="48.89" y1="25.662" y2="37.943"/><line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" x1="1.11" x2="17.316" y1="37.942" y2="25.127"/><path d="M1.11,12.053c0,0,18.4,16.037,19.899,17.342  S24.069,31,25,31s2.492-0.299,3.991-1.604s19.899-17.342,19.899-17.342" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="1.9959"/></svg>
+</span><a href="/cdn-cgi/l/email-protection#6c0e000d0f07010d021807082c0d0300420f0301"><span class="__cf_email__" data-cfemail="64060805070f09050a100f0024050b084a070b09">[email&#160;protected]</span></a></li>
+                                                                <li class="address"><span><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect fill="none" height="50" width="50"/><path d="M40,17  c0,13.604-15,31-15,31S10,30.928,10,17c0-8.285,6.715-15,15-15C33.284,2,40,8.715,40,17z" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.7647"/><circle cx="25" cy="18" fill="none" r="6" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.7647"/></svg>
+</span>5812 Signal Ave NE Albuquerque, NM 87113</li>
+                            </ul>
+                            <ul class="social-icons">
+                                                                    <li><a href="https://www.facebook.com/BlackmanMartialArtsAcademy/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                                    <li><a href="https://twitter.com/blackmantkd" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                                    <li><a href="https://www.instagram.com/blackmancma/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                                    <li><a href="https://www.youtube.com/channel/UCgVhd50zxxgeKC8XIzVMWcQ" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                                            </ul>
+                        </div>
+                                                        </div>
+        <div class="footer-col fourth-col">
+            <h5>Navigation</h5>
+            <hr />
+            <ul id="footer-navigation" class="menu"><li id="menu-item-402" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-402"><a href="https://blackmantkd.com/">Home</a></li>
+<li id="menu-item-403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-403"><a href="#">Programs</a>
+<ul class="sub-menu">
+	<li id="menu-item-3011" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-3011"><a href="https://blackmantkd.com/program/juniors-martial-arts/">Tiny Tigers / Little Dragons (3 – 6)</a></li>
+	<li id="menu-item-412" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-412"><a href="https://blackmantkd.com/program/kids-martial-arts/">Kids Martial Arts (7 &#8211; 12)</a></li>
+	<li id="menu-item-432" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-432"><a href="https://blackmantkd.com/program/teens-martial-arts/">Teen Martial Arts (13+)</a></li>
+	<li id="menu-item-405" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-405"><a href="https://blackmantkd.com/program/adult-martial-arts/">Adult Martial Arts</a></li>
+</ul>
+</li>
+<li id="menu-item-413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-413"><a href="https://blackmantkd.com/blog/">Blog</a></li>
+<li id="menu-item-416" class="menu-item menu-item-type-post_type menu-item-object-location menu-item-416"><a href="https://blackmantkd.com/location/albuquerque-nm/">Contact</a></li>
+</ul>        </div>
+    </div>
+</div>			<div class="footer-bot">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="footer-bot-left">
+                        <p>&copy; Copyright 2022 Market Muscles, LLC <a href="/privacy-policy/" target="_blank" class="privacy-link">Privacy Policy</a></p>
+                    </div>
+                    <div class="footer-bot-right">
+                        <p>
+                            <a href="https://www.marketmuscles.com/" target="_blank"><img src="https://media.musclegrid.io/site-assets/img/mm-logo.png" alt="Marketing Websites"><span>Marketing Websites by Market Muscles, LLC</span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type='text/javascript' id='mm_form_custom_script-js-extra'>
+/* <![CDATA[ */
+var frontend_ajax_object = {"ajaxurl":"https:\/\/blackmantkd.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blackmantkd.com/wp-content/plugins/mm-forms/js/mm-form.js?ver=5.8.1' id='mm_form_custom_script-js'></script>
+<script type='text/javascript' id='thickbox-js-extra'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"https:\/\/blackmantkd.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blackmantkd.com/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105' id='thickbox-js'></script>
+<script type='text/javascript' defer="defer" src='https://blackmantkd.com/wp-content/themes/mm-prime-ma/assets/build/scripts.min.js?ver=1.0.1' id='mm-core-js'></script>
+<script type='text/javascript' defer="defer" src='https://blackmantkd.com/wp-content/plugins/powerpack-elements/assets/lib/instafeed/instafeed.min.js?ver=1.4.1' id='instafeed-js'></script>
+<script type='text/javascript' defer="defer" src='https://blackmantkd.com/wp-content/themes/mm-prime-ma/assets/loadjs/TweenMax.min.js' id='tweenmax-js'></script>
+<script type='text/javascript' defer="defer" src='https://blackmantkd.com/wp-content/themes/mm-prime-ma/assets/loadjs/ScrollMagic.min.js' id='scrollmagic-js'></script>
+<script type='text/javascript' defer="defer" src='https://blackmantkd.com/wp-content/themes/mm-prime-ma/assets/loadjs/animation.gsap.min.js' id='gsap-js'></script>
+        
+                            <script>
+              window.fbAsyncInit = function() {
+                FB.init({
+                  appId            : '178880386027467',
+                  autoLogAppEvents : true,
+                  xfbml            : true,
+                  version          : 'v2.11'
+                });
+              };
+
+              (function(d, s, id){
+                 var js, fjs = d.getElementsByTagName(s)[0];
+                 if (d.getElementById(id)) {return;}
+                 js = d.createElement(s); js.id = id;
+                 js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+                 fjs.parentNode.insertBefore(js, fjs);
+               }(document, 'script', 'facebook-jssdk'));
+            </script>
+            <div class="fb-customerchat" page_id="170890126277114" ref="" theme_color="#ee1d24"></div>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoAmIfX_aLMJjd514jl-qyZ89nmvgE_b4"></script>
+        <script type="text/javascript">
+        (function($) {
+
+        /*
+        *  new_map
+        *
+        *  This function will render a Google Map onto the selected jQuery element
+        *
+        *  @type    function
+        *  @date    8/11/2013
+        *  @since   4.3.0
+        *
+        *  @param   $el (jQuery element)
+        *  @return  n/a
+        */
+
+        function new_map( $el ) {
+            
+            // var
+            var $markers = $el.find('.marker');
+            
+            
+            // vars
+            var args = {
+                zoom        : 20,
+                center      : new google.maps.LatLng(0, 0),
+                scrollwheel: false,
+                navigationControl: false,
+                mapTypeControl: false,
+                scaleControl: false,
+                draggable: true,
+                mapTypeId   : google.maps.MapTypeId.ROADMAP
+            };
+            
+            
+            // create map               
+            var map = new google.maps.Map( $el[0], args);
+            
+            
+            // add a markers reference
+            map.markers = [];
+            
+            
+            // add markers
+            $markers.each(function(){
+                
+                add_marker( $(this), map );
+                
+            });
+            
+            
+            // center map
+            center_map( map );
+            
+            
+            // return
+            return map;
+            
+        }
+
+        /*
+        *  add_marker
+        *
+        *  This function will add a marker to the selected Google Map
+        *
+        *  @type    function
+        *  @date    8/11/2013
+        *  @since   4.3.0
+        *
+        *  @param   $marker (jQuery element)
+        *  @param   map (Google Map object)
+        *  @return  n/a
+        */
+
+        function add_marker( $marker, map ) {
+
+            // var
+            var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
+
+            // create marker
+            var marker = new google.maps.Marker({
+                position    : latlng,
+                map         : map
+            });
+
+            // add to array
+            map.markers.push( marker );
+
+            // if marker contains HTML, add it to an infoWindow
+            if( $marker.html() )
+            {
+                // create info window
+                var infowindow = new google.maps.InfoWindow({
+                    content     : $marker.html()
+                });
+
+                // show info window when marker is clicked
+                google.maps.event.addListener(marker, 'click', function() {
+
+                    infowindow.open( map, marker );
+
+                });
+            }
+
+        }
+
+        /*
+        *  center_map
+        *
+        *  This function will center the map, showing all markers attached to this map
+        *
+        *  @type    function
+        *  @date    8/11/2013
+        *  @since   4.3.0
+        *
+        *  @param   map (Google Map object)
+        *  @return  n/a
+        */
+
+        function center_map( map ) {
+
+            // vars
+            var bounds = new google.maps.LatLngBounds();
+
+            // loop through all markers and create bounds
+            $.each( map.markers, function( i, marker ){
+
+                var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
+
+                bounds.extend( latlng );
+
+            });
+
+            // only 1 marker?
+            if( map.markers.length == 1 )
+            {
+                // set center of map
+                map.setCenter( bounds.getCenter() );
+                map.setZoom( 16 );
+            }
+            else
+            {
+                // fit to bounds
+                map.fitBounds( bounds );
+            }
+
+        }
+
+        /*
+        *  document ready
+        *
+        *  This function will render each map when the document is ready (page has loaded)
+        *
+        *  @type    function
+        *  @date    8/11/2013
+        *  @since   5.0.0
+        *
+        *  @param   n/a
+        *  @return  n/a
+        */
+        // global var
+        var map = null;
+
+        $(document).ready(function(){
+
+            $('.acf-map').each(function(){
+
+                // create map
+                map = new_map( $(this) );
+
+            });
+
+        });
+
+        })(jQuery);
+        </script>
+        <!--<script src="https://blackmantkd.com/wp-content/themes/mm-prime-ma/assets/js/script/flying-pages.min.js"></script>
+        <script>
+          flyingPages({
+              delay: 0,
+              ignoreKeywords: [],
+              maxRPS: 3,
+              hoverDelay: 50
+          });
+        </script>-->
+    </div>
+    </body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1655726248 -->

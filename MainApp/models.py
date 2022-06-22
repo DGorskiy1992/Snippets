@@ -23,6 +23,7 @@ class Snippet(models.Model):
 
 class Comment(models.Model):
     text = models.TextField(max_length=1000)
+    image = models.ImageField(upload_to='images', default='images/def.png')
     creation_date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(to=User, on_delete=models.CASCADE,
                                related_name="comments")
