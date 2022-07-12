@@ -34,5 +34,6 @@ urlpatterns = [
                   path('my_snippets', views.my_snips, name='my_snips'),
                   path('comment/add', views.comment_add, name="comment_add"),
                   path('admin/', admin.site.urls),
+                  path('snippets/sort', views.snippets_sort, name="sort"),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL,
                                                                                            document_root=settings.MEDIA_ROOT)

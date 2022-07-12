@@ -11,60 +11,80 @@
     </div>
 
 
-
     <div class="row">
-        <div class="col-4 offset-2">
+        <div class="col">
             Список сниппетов:
         </div>
-        <div class="col-2">
-            <form action="" method="post">
-                {% csrf_token %}
-                Показать только на языке программирования
+<!--        <div class="col-2">-->
+<!--            <form action="" method="post">-->
+<!--                {% csrf_token %}-->
+<!--                Показать только на языке программирования-->
+<!--                <select name="lang">-->
+<!--                    <option disabled selected>Выберите язык</option>-->
+<!--                    <option value="C++">C++</option>-->
+<!--                    <option value="python">Python</option>-->
+<!--                    <option value="js">JS</option>-->
+<!--                </select>-->
+<!--                <input type="submit" value="Выбрать">-->
+<!--            </form>-->
+<!--        </div>-->
+        <div class="col-8">
+            <form action="" method="get">
+                Сортировать по:
+                <select name="sort">
+                    <option disabled selected>Выберите параметр</option>
+                    <option value="name">Имени</option>
+                    <option value="creation_date">Дате</option>
+                    <option value="user">Автору</option>
+                </select>
+                Выбрать язык
                 <select name="lang">
                     <option disabled selected>Выберите язык</option>
                     <option value="C++">C++</option>
                     <option value="python">Python</option>
                     <option value="js">JS</option>
                 </select>
-                <input type="submit" value="Выбрать">
+                <input type="submit" value="Отсортировать">
             </form>
         </div>
     </div>
+
     <div class="row">
 
-<div class="col">
-   <table class="table table-striped">
-       <thead class="thead-dark">
-       <tr>
-           <th scope="col">ID</th>
-           <th scope="col">Название</th>
-           <th scope="col">Автор</th>
-           <th scope="col">Дата создания</th>
-       </tr>
-       </thead>
-       <tbody>
-        {% for snippet in snippets %}
-       <tr>
-           <td scope="row">{{snippet.id}}</td>
-           <td>
-               <a href="{% url 'snippet_page' snippet.id %}">{{snippet.name}}</a>
-               <a class="tool" href="{% url 'snippet_delete' snippet.id %}"><i style="color:red" class="fa-solid fa-ban"></i></a>
-               <a class="tool" href="{% url 'snippet_edit' snippet.id %}"><i style="color:blue" class="fa-solid fa-pen-to-square"></i></a>
+        <div class="col">
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Название</th>
+                    <th scope="col">Автор</th>
+                    <th scope="col">Дата создания</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for snippet in snippets %}
+                <tr>
+                    <td scope="row">{{snippet.id}}</td>
+                    <td>
+                        <a href="{% url 'snippet_page' snippet.id %}">{{snippet.name}}</a>
+                        <a class="tool" href="{% url 'snippet_delete' snippet.id %}"><i style="color:red"
+                                                                                        class="fa-solid fa-ban"></i></a>
+                        <a class="tool" href="{% url 'snippet_edit' snippet.id %}"><i style="color:blue"
+                                                                                      class="fa-solid fa-pen-to-square"></i></a>
 
-           </td>
-           <td>{{snippet.creation_date}}</td>
-           <td>{{snippet.user|is_empty:"Аноним"}}</td>
-       </tr>
-       {% endfor %}
+                    </td>
+                    <td>{{snippet.creation_date}}</td>
+                    <td>{{snippet.user|is_empty:"Аноним"}}</td>
+                </tr>
+                {% endfor %}
 
 
-
-       </tbody>
-   </table>
-   <div align="right">
-       <i style="color: gray;">Всего сниппетов: {{ quantity }}</i>
-   </div>
-</div>
+                </tbody>
+            </table>
+            <div align="right">
+                <i style="color: gray;">Всего сниппетов: {{ quantity }}</i>
+            </div>
+        </div>
 
 
     </div>

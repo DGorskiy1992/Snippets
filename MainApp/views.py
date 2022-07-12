@@ -53,12 +53,37 @@ def snippet_edit(request, id):
 
 
 def snippets_page(request):
+    snippets = Snippet.objects.all()
     if request.user.is_anonymous:
-        snippets = Snippet.objects.filter(is_public=True)
+        snippets = snippets.filter(is_public=True)
     else:
-        snippets = Snippet.objects.filter(Q(is_public=True) | Q(user=request.user))
-    if request.method == "POST":
-        snippets = snippets.filter(lang=request.POST.get("lang"))
+        snippets = snippets.filter(Q(is_public=True) | Q(user=request.user))
+    if request.GET.get("sort") and request.GET.get("lang"):
+        sort = request.GET.get("sort")
+        language = request.GET.get("lang")
+        if sort in {'name', 'creation_date', 'user'} and language in {'C++', 'python', 'js'}:
+            snippets = snippets.filter(lang=language)
+            snippets = snippets.order_by(sort)
+    elif request.GET.get("lang"):
+        language = request.GET.get("lang")
+        if language in {'C++', 'python', 'js'}:
+            snippets = snippets.filter(lang=language)
+
+    elif request.GET.get("sort"):
+        sort = request.GET.get("sort")
+        if sort in {'name', 'creation_date', 'user'}:
+            snippets = snippets.order_by(sort)
+
+    # if request.method == "POST":
+    #     snippets = Snippet.objects.filter(lang=request.POST.get("lang"))
+    #
+
+    # if sort_field == 'snip_name':
+    #     snippets = snippets.order_by('name')
+    # if sort_field == 'snip_date':
+    #     snippets = snippets.order_by('creation_date')
+    # if sort_field == 'snip_auth':
+    #     snippets = snippets.order_by('user')
     context = {
         'pagename': 'Просмотр сниппетов',
         'snippets': snippets,
@@ -133,6 +158,15 @@ def comment_add(request):
         return redirect(f'/snippets/{snipet_id}')
 
     raise Http404
+
+
+def snippets_sort(request):
+    field = request.GET.get("sort")
+    if field in {'snip_name', 'snip_date', 'snip_auth'}:
+        return snippets_page(request, field)
+    else:
+        raise Http404
+
 
 def snippets_search(request):
     if request.method == "POST":
