@@ -10,24 +10,26 @@
         </div>
     </div>
 
-
     <div class="row">
         <div class="col">
             Список сниппетов:
         </div>
-<!--        <div class="col-2">-->
-<!--            <form action="" method="post">-->
-<!--                {% csrf_token %}-->
-<!--                Показать только на языке программирования-->
-<!--                <select name="lang">-->
-<!--                    <option disabled selected>Выберите язык</option>-->
-<!--                    <option value="C++">C++</option>-->
-<!--                    <option value="python">Python</option>-->
-<!--                    <option value="js">JS</option>-->
-<!--                </select>-->
-<!--                <input type="submit" value="Выбрать">-->
-<!--            </form>-->
-<!--        </div>-->
+    </div>
+    <div class="row">
+
+        <!--        <div class="col-2">-->
+        <!--            <form action="" method="post">-->
+        <!--                {% csrf_token %}-->
+        <!--                Показать только на языке программирования-->
+        <!--                <select name="lang">-->
+        <!--                    <option disabled selected>Выберите язык</option>-->
+        <!--                    <option value="C++">C++</option>-->
+        <!--                    <option value="python">Python</option>-->
+        <!--                    <option value="js">JS</option>-->
+        <!--                </select>-->
+        <!--                <input type="submit" value="Выбрать">-->
+        <!--            </form>-->
+        <!--        </div>-->
         <div class="col-8">
             <form action="" method="get">
                 Сортировать по:
@@ -37,14 +39,33 @@
                     <option value="creation_date">Дате</option>
                     <option value="user">Автору</option>
                 </select>
+                <label for="sort_straight"><i class="fa-solid fa-caret-up"></i></label>
+                <label for="sort_reverse"><i class="fa-solid fa-caret-down"></i></label>
+                <input id="sort_straight" name="sort_order" type="radio" value="straight" checked>
+                <input id="sort_reverse" name="sort_order" type="radio" value="reverse">
+
                 Выбрать язык
                 <select name="lang">
                     <option disabled selected>Выберите язык</option>
                     <option value="C++">C++</option>
                     <option value="python">Python</option>
                     <option value="js">JS</option>
+                    <option value="all">Сбросить</option>
                 </select>
                 <input type="submit" value="Отсортировать">
+            </form>
+        </div>
+        <div class="col-2">
+            <form action="" method="get">
+                <select name="selected_user">
+                    <option disabled selected>Выбрать пользователя</option>
+                    {% for user in users %}
+                    {% if user.snippets__count > 0 %}
+                    <option value="{{user.username}}">{{user.username}}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Выбрать">
             </form>
         </div>
     </div>

@@ -1,10 +1,16 @@
 from django.http import Http404
 from django.shortcuts import render, redirect
-from MainApp.models import Snippet, Comment
+from MainApp.models import Snippet, Comment, User
 from MainApp.forms import SnippetForm, UserRegistrationForm, CommentForm
 from django.contrib import auth
-from django.db.models import Q
+from django.db.models import Q, Count
 from django.contrib.auth.decorators import login_required
+
+from pygments import highlight
+from pygments.lexers.c_cpp import CppLexer
+from pygments.lexers.python import PythonLexer
+
+from pygments.formatters import HtmlFormatter
 
 
 def index_page(request):
@@ -54,6 +60,9 @@ def snippet_edit(request, id):
 
 def snippets_page(request):
     snippets = Snippet.objects.all()
+    users = User.objects.annotate(Count("snippets"))
+
+    print(users)
     if request.user.is_anonymous:
         snippets = snippets.filter(is_public=True)
     else:
@@ -63,32 +72,33 @@ def snippets_page(request):
         language = request.GET.get("lang")
         if sort in {'name', 'creation_date', 'user'} and language in {'C++', 'python', 'js'}:
             snippets = snippets.filter(lang=language)
-            snippets = snippets.order_by(sort)
+            if request.GET.get("sort_order") == "straight":
+                snippets = snippets.order_by(sort)
+            else:
+                snippets = snippets.order_by(-sort)
     elif request.GET.get("lang"):
         language = request.GET.get("lang")
+        if language == 'all':
+            return redirect('/snippets/list')
         if language in {'C++', 'python', 'js'}:
             snippets = snippets.filter(lang=language)
-
     elif request.GET.get("sort"):
         sort = request.GET.get("sort")
         if sort in {'name', 'creation_date', 'user'}:
-            snippets = snippets.order_by(sort)
+            if request.GET.get("sort_order") == "straight":
+                snippets = snippets.order_by(sort)
+            else:
+                snippets = snippets.order_by("-" + sort)
 
-    # if request.method == "POST":
-    #     snippets = Snippet.objects.filter(lang=request.POST.get("lang"))
-    #
-
-    # if sort_field == 'snip_name':
-    #     snippets = snippets.order_by('name')
-    # if sort_field == 'snip_date':
-    #     snippets = snippets.order_by('creation_date')
-    # if sort_field == 'snip_auth':
-    #     snippets = snippets.order_by('user')
+    if request.GET.get("selected_user"):
+        selected_username = request.GET.get("selected_user")
+        selected_user = User.objects.get(username=selected_username)
+        snippets = Snippet.objects.filter(user=selected_user)
     context = {
         'pagename': 'Просмотр сниппетов',
         'snippets': snippets,
         'quantity': len(snippets),
-
+        'users': users,
     }
     return render(request, 'pages/view_snippets.html', context)
 
@@ -96,9 +106,17 @@ def snippets_page(request):
 def snippet_page(request, id):
     snippet = Snippet.objects.get(pk=id)
     form = CommentForm()
+    code = snippet.code
+    my_lexer = None
+    if snippet.lang == "C++":
+        my_lexer = CppLexer
+    else:
+        my_lexer = PythonLexer
+    formatted_code = highlight(code, my_lexer(), HtmlFormatter())
     context = {
         "snippet": snippet,
-        "form": form
+        "form": form,
+        "code": formatted_code,
     }
     return render(request, 'pages/snippet.html', context)
 
@@ -177,3 +195,44 @@ def snippets_search(request):
         except Snippet.DoesNotExist:
             return redirect('/')
     raise Http404
+
+
+def users_rate(request):
+    users = User.objects.all()
+
+    class Rated_User:
+        def __init__(self, id, name, snips, comms):
+            self.id = id
+            self.name = name
+            self.snips = snips
+            self.comms = comms
+
+    rated_users = []
+    total_snippets = 0
+    total_comments = 0
+    for user in users:
+        user_snips = user.snippets.all()
+        user_comms = user.comments.all()
+
+        num_of_user_snips = user_snips.count()  # количество снипов и комментов от текущего юзера
+        num_os_user_comms = user_comms.count()
+
+        total_snippets += num_of_user_snips  # подсчитываем общее количество снипов и комментов на сайте от всех юзеров
+        total_comments += num_os_user_comms
+
+        new_user = Rated_User(user.id, user.username, num_of_user_snips, num_os_user_comms)
+        rated_users.append(new_user)
+
+        sort_field = request.GET.get("sort")
+        if sort_field == "name" or not sort_field:
+            rated_users.sort(key=lambda x: x.name)
+        elif sort_field == "snippets":
+            rated_users.sort(key=lambda x: x.snips, reverse=True)
+        elif sort_field == "comments":
+            rated_users.sort(key=lambda x: x.comms, reverse=True)
+
+    context = {"users": rated_users,
+               "total_snips": total_snippets,
+               "total_comms": total_comments}
+
+    return render(request, 'pages/users_rating.html', context)

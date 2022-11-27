@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <h1>Рейтинг пользователей</h1>
+            <hr>
+        </div>
+        <div class="col">
+            <form action="" method="get">
+                Сортировать по:
+                <select name="sort">
+                    <option disabled selected>Выберите параметр</option>
+                    <option value="name">Имени</option>
+                    <option value="snippets">Количеству сниппетов</option>
+                    <option value="comments">Количеству комментариев</option>
+                </select>
+                <input type="submit" value="Отсортировать">
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col">
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Пользователь</th>
+                    <th scope="col">Сниппетов</th>
+                    <th scope="col">Комментариев</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.snips}}</td>
+                    <td>{{user.comms}}</td>
+
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <h4>Всего сниппетов: {{ total_snips }} </h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h4>Всего комментариев: {{ total_comms }}</h4>
+        </div>
+    </div>
+</div>
+{% endblock %}

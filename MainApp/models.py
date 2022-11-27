@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from MainApp.formatChecker import ContentTypeRestrictedFileField
 
 LANGS = [
     ("py", "python"),
@@ -22,8 +23,8 @@ class Snippet(models.Model):
 
 
 class Comment(models.Model):
-    text = models.TextField(max_length=1000)
-    image = models.ImageField(upload_to='images', default='images/def.png')
+    text = models.TextField(max_length=10000)
+    image = ContentTypeRestrictedFileField(upload_to='images', content_types=["image/png"], max_upload_size=5242880, blank=True, null=True)
     creation_date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(to=User, on_delete=models.CASCADE,
                                related_name="comments")

@@ -12,6 +12,9 @@ class SnippetForm(ModelForm):
         widgets = {
             'name': TextInput(attrs={"class": 'form-control form-control-lg', 'placeholder': 'Название виджета'})
         }
+        labels = {
+            'name':''
+        }
 
 
 class UserRegistrationForm(ModelForm):
