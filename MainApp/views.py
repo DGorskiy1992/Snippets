@@ -32,6 +32,10 @@ def add_snippet_page(request):
             return redirect("snippets_list")
 
 
+
+
+
+
 @login_required
 def snippet_delete(request, id):
     snippet = Snippet.objects.get(pk=id)
@@ -61,45 +65,41 @@ def snippet_edit(request, id):
 def snippets_page(request):
     snippets = Snippet.objects.all()
     users = User.objects.annotate(Count("snippets"))
+    sort = 'none'
 
-    print(users)
     if request.user.is_anonymous:
         snippets = snippets.filter(is_public=True)
     else:
         snippets = snippets.filter(Q(is_public=True) | Q(user=request.user))
-    if request.GET.get("sort") and request.GET.get("lang"):
-        sort = request.GET.get("sort")
+
+    if request.GET.get('reverse'):
+        snippets = snippets.reverse()
+
+    if request.GET.get("lang"):
         language = request.GET.get("lang")
-        if sort in {'name', 'creation_date', 'user'} and language in {'C++', 'python', 'js'}:
-            snippets = snippets.filter(lang=language)
-            if request.GET.get("sort_order") == "straight":
-                snippets = snippets.order_by(sort)
-            else:
-                snippets = snippets.order_by(-sort)
-    elif request.GET.get("lang"):
-        language = request.GET.get("lang")
-        if language == 'all':
-            return redirect('/snippets/list')
-        if language in {'C++', 'python', 'js'}:
-            snippets = snippets.filter(lang=language)
-    elif request.GET.get("sort"):
+        snippets = snippets.filter(lang=language)
+        sort_type = request.GET.get("sort_method")
+        if not (sort_type == 'none'):
+            snippets = snippets.order_by(sort_type)
+
+    if request.GET.get("sort"):
         sort = request.GET.get("sort")
-        if sort in {'name', 'creation_date', 'user'}:
-            if request.GET.get("sort_order") == "straight":
-                snippets = snippets.order_by(sort)
-            else:
-                snippets = snippets.order_by("-" + sort)
+        snippets = snippets.order_by(sort)
 
     if request.GET.get("selected_user"):
         selected_username = request.GET.get("selected_user")
         selected_user = User.objects.get(username=selected_username)
-        snippets = Snippet.objects.filter(user=selected_user)
+        snippets = snippets.filter(user=selected_user)
+
+
     context = {
         'pagename': 'Просмотр сниппетов',
         'snippets': snippets,
         'quantity': len(snippets),
         'users': users,
-    }
+        'sort_method': sort,
+        }
+
     return render(request, 'pages/view_snippets.html', context)
 
 
@@ -113,11 +113,17 @@ def snippet_page(request, id):
     else:
         my_lexer = PythonLexer
     formatted_code = highlight(code, my_lexer(), HtmlFormatter())
-    context = {
-        "snippet": snippet,
-        "form": form,
-        "code": formatted_code,
-    }
+    if request.user.is_anonymous:
+        context = {
+            "snippet": snippet,
+            "code": formatted_code,
+        }
+    else:
+        context = {
+            "snippet": snippet,
+            "form": form,
+            "code": formatted_code,
+        }
     return render(request, 'pages/snippet.html', context)
 
 
